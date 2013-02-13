@@ -35,7 +35,6 @@ class PaintingsController < ApplicationController
   def destroy
     @painting = Painting.find(params[:id])
     if @painting.destroy
-      
     respond_to do |format|
       format.js { render :template => 'paintings/delete.js.erb', :layout => false }
       end
